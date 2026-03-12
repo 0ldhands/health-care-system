@@ -1,0 +1,135 @@
+/* FLOAT ROBOT */
+.chatbot-float{
+position:fixed;
+bottom:10px;
+right:25px;
+width:75px;
+height:75px;
+border-radius:50%;
+background:linear-gradient(135deg,#4f46e5,#9333ea);
+display:flex;
+justify-content:center;
+align-items:center;
+cursor:pointer;
+box-shadow:0 0 18px #7c3aed,0 0 35px rgba(124,58,237,0.5);
+animation:float 3s ease-in-out infinite;
+z-index:999;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-6px);}
+100%{transform:translateY(0);}
+}
+
+.chatbot-float img{
+width:58px;
+height:58px;
+border-radius:50%;
+}
+
+/* CHAT WINDOW */
+.chatbot-box{
+position:fixed;
+bottom:70px;
+right:90px;
+width:350px;
+height:460px;
+background:rgba(15,16,37,0.75);
+backdrop-filter:blur(15px);
+border:1px solid rgba(140,140,255,0.2);
+border-radius:20px;
+display:flex;
+flex-direction:column;
+overflow:hidden;
+box-shadow:0 0 25px rgba(90,108,255,0.4);
+z-index:999;
+}
+
+/* HEADER */
+.chatbot-header{
+padding:15px;
+background:linear-gradient(90deg,#4f46e5,#9333ea);
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+font-weight:600;
+font-size:15px;
+}
+
+/* CHAT AREA */
+.chat-area{
+flex:1;
+padding:10px;
+overflow-y:auto;
+display:flex;
+flex-direction:column;
+gap:6px;
+color:white;
+}
+
+/* USER MESSAGE */
+.user{
+align-self:flex-end;
+background:linear-gradient(135deg,#4f46e5,#6366f1);
+padding:0px 12px;
+border-radius:14px 14px 4px 14px;
+max-width:80%;
+font-size:14px;
+}
+
+/* BOT MESSAGE */
+.bot{
+align-self:flex-start;
+background:#1e1f3a;
+padding:0px 12px;
+border-radius:14px 14px 14px 4px;
+max-width:80%;
+font-size:14px;
+}
+
+/* INPUT AREA */
+.input-area{
+display:flex;
+padding:8px;
+background:#0a0a18;
+gap:8px;
+align-items:center;
+}
+
+/* BIG TEXTBOX */
+.input-area input{
+flex:1;
+height:42px;              /* same height */
+padding:4px 17px;           /* vertical padding remove */
+border-radius:12px;
+border:none;
+outline:none;
+font-size:14px;
+background:#181832;
+color:white;
+line-height:42px;         /* vertical center text */
+}
+
+/* SMALL ROUND SEND BUTTON */
+.input-area button{
+width:42px;
+height:42px;              /* same height */
+min-width:42px;
+border-radius:50%;
+border:none;
+background:linear-gradient(135deg,#9333ea,#4f46e5);
+color:white;
+cursor:pointer;
+font-size:16px;
+display:flex;
+justify-content:center;
+align-items:center;
+transition:0.2s;
+}
+
+.input-area button:hover{
+transform:scale(1.1);
+box-shadow:0 0 12px #9333ea;
+}

@@ -1,0 +1,133 @@
+/* PASSWORD WRAPPER */
+.password-wrapper {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 13px;
+  padding-right: 45px; /* space for eye */
+  border-radius: 14px;
+  border: 1px solid #d8b4fe;
+  background: #faf5ff;
+  color: #4c1d95;
+  outline: none;
+  transition: 0.3s ease;
+  font-size: 14px;
+}
+
+/* EYE ICON */
+.eye-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+  color: #9333ea;
+  transition: 0.2s;
+}
+
+.eye-icon:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+
+
+.signup-container{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:linear-gradient(135deg,#f3e8ff,#e9d5ff,#ddd6fe); /* light lavender */
+  font-family:'Poppins',sans-serif;
+}
+
+/* BOX */
+.signup-box{
+  width:400px;
+  padding:34px;
+  background:rgba(255,255,255,0.9);
+  border-radius:22px;
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(168,85,247,0.15);
+  box-shadow:0 10px 30px rgba(168,85,247,0.15);
+  text-align:center;
+  color:#4c1d95;
+}
+
+/* TITLE */
+.signup-box h2{
+  font-size:30px;
+  font-weight:800;
+  margin-bottom:8px;
+  background:linear-gradient(90deg,#a855f7,#c084fc);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.signup-box p{
+  font-size:14px;
+  margin-bottom:22px;
+  color:#6b21a8;
+}
+
+/* INPUT */
+.signup-box input{
+  width:100%;
+  padding:12px;
+  margin-bottom:16px;
+  background:#faf5ff;
+  border:1px solid #d8b4fe;
+  border-radius:12px;
+  color:#4c1d95;
+  outline:none;
+  transition:0.25s;
+}
+
+.signup-box input:focus{
+  border-color:#a855f7;
+  box-shadow:0 0 8px rgba(168,85,247,0.3);
+}
+
+.signup-box input::placeholder{
+  color:#a78bfa;
+}
+
+/* BUTTON */
+.signup-box button{
+  width:100%;
+  padding:13px;
+  border:none;
+  border-radius:14px;
+  background:linear-gradient(90deg,#c084fc,#a855f7);
+  color:white;
+  font-size:16px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.25s;
+  box-shadow:0 4px 15px rgba(168,85,247,0.25);
+}
+
+.signup-box button:hover{
+  transform:scale(1.05);
+  background:linear-gradient(90deg,#a855f7,#9333ea);
+}
+
+/* SIGNIN LINK */
+.signin-link{
+  margin-top:18px;
+  font-size:14px;
+  color:#6b21a8;
+}
+
+.signin-link a{
+  color:#9333ea;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.signin-link a:hover{
+  text-decoration:underline;
+}

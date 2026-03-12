@@ -1,0 +1,202 @@
+/* ===== PAGE BACKGROUND ===== */
+.exercise-page {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 45px 30px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  background: linear-gradient(145deg, #f8f6ff, #ede5ff, #f3e8ff);
+  border-radius: 35px;
+  box-shadow: 0 25px 60px rgba(124, 58, 237, 0.12);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(124, 58, 237, 0.1);
+  animation: fadeIn 0.7s ease;
+}
+
+/* ===== FADE IN ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== HEADING ===== */
+.exercise-page h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #7c3aed, #c084fc);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: 1.2px;
+  text-shadow: 1px 1px 2px rgba(124, 58, 237, 0.2);
+}
+
+/* ===== LEVEL SELECT ===== */
+.level-select {
+  margin-bottom: 35px;
+}
+
+.level-select select {
+  padding: 12px 26px;
+  border-radius: 50px;
+  border: none;
+  background: #f3e8ff;
+  color: #6b21a8;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.15);
+  transition: all 0.3s ease;
+}
+
+.level-select select:hover {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress-bar {
+  width: 100%;
+  height: 14px;
+  background: #e9d5ff;
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  box-shadow: inset 0 2px 4px rgba(124, 58, 237, 0.2);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #a855f7, #7c3aed);
+  transition: width 0.7s ease;
+  border-radius: 25px;
+}
+
+/* ===== EXERCISE CARD ===== */
+.exercise-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(20px);
+  padding: 55px 40px;
+  border-radius: 32px;
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  box-shadow:
+    0 20px 50px rgba(124, 58, 237, 0.1),
+    0 10px 20px rgba(124, 58, 237, 0.05);
+  transition: all 0.4s ease;
+  max-width: 540px;
+  margin: auto;
+}
+
+.exercise-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 25px 60px rgba(124, 58, 237, 0.18),
+              0 12px 25px rgba(124, 58, 237, 0.08);
+}
+
+/* ===== EXERCISE NAME ===== */
+.exercise-card h3 {
+  font-size: 28px;
+  margin-bottom: 28px;
+  color: #5b21b6;
+  font-weight: 800;
+  text-shadow: 0 1px 2px rgba(124, 58, 237, 0.15);
+}
+
+/* ===== TIMER ===== */
+.timer {
+  font-size: 44px;
+  font-weight: 900;
+  color: #7c3aed;
+  margin-bottom: 35px;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+.timer.active {
+  color: #ef4444;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+/* ===== BUTTON GROUP ===== */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ===== PRIMARY BUTTON ===== */
+.primary-btn {
+  padding: 16px 36px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  background: linear-gradient(135deg, #a855f7, #7c3aed);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.35);
+  transition: all 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(124, 58, 237, 0.45);
+}
+
+/* ===== SECONDARY BUTTON ===== */
+.secondary-btn {
+  padding: 16px 36px;
+  border-radius: 50px;
+  border: 2px solid #a855f7;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  background: transparent;
+  color: #7c3aed;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: #f5e5ff;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.2);
+}
+
+/* ===== PROGRESS TEXT ===== */
+.progress-text {
+  margin-top: 32px;
+  font-size: 16px;
+  color: #6d28d9;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .exercise-page {
+    padding: 35px 20px;
+  }
+
+  .exercise-card {
+    padding: 40px 25px;
+  }
+
+  .timer {
+    font-size: 36px;
+  }
+
+  .button-group {
+    flex-direction: column;
+  }
+
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
+  }
+}

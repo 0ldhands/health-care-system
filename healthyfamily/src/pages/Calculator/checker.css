@@ -1,0 +1,349 @@
+/* ===== GLOBAL FIX ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+.calculator-wrapper {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f3e8ff, #ede9fe);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== CARD ===== */
+.card {
+  width: 600px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  padding: 35px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 15px 35px rgba(124, 58, 237, 0.25),
+    0 5px 15px rgba(124, 58, 237, 0.15);
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 20px 40px rgba(124, 58, 237, 0.35),
+    0 8px 20px rgba(124, 58, 237, 0.2);
+}
+
+/* ===== TITLE ===== */
+.checker-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4c1d95;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.disclaimer {
+  font-size: 12px;
+  color: #7c3aed;
+  margin-bottom: 20px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* ===== LABEL ===== */
+.card label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #5b21b6;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* ===== INPUT ===== */
+.card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  border-radius: 14px;
+  border: 1px solid #e9d5ff;
+  background: #faf5ff;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.card input:focus {
+  outline: none;
+  border-color: #7c3aed;
+  background: white;
+  box-shadow: 0 0 10px rgba(124, 58, 237, 0.4);
+}
+
+/* ===== BP ROW ===== */
+.bp-row {
+  display: flex;
+  gap: 12px;
+}
+
+.bp-row input {
+  flex: 1;
+}
+
+/* ===== BUTTON GROUP ===== */
+.btn-group {
+  display: flex;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+/* ===== BUTTON ===== */
+.card button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 14px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Primary Button */
+.card button:first-child {
+  background: linear-gradient(135deg, #7c3aed, #6d28d9);
+  color: white;
+}
+
+.card button:first-child:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+}
+
+/* Clear Button */
+.clear-btn {
+  background: #f3e8ff !important;
+  color: #5b21b6 !important;
+}
+
+.clear-btn:hover {
+  background: #e9d5ff !important;
+}
+
+/* ===== RESULT BOX ===== */
+.result {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 15px;
+  background: #faf5ff;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.result p {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ===== STATUS COLORS ===== */
+.normal {
+  color: #16a34a;
+}
+
+.warning {
+  color: #f59e0b;
+}
+
+.high {
+  color: #dc2626;
+}
+
+.low {
+  color: #2563eb;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .card {
+    padding: 25px;
+  }
+
+  .bp-row {
+    flex-direction: column;
+  }
+
+  .btn-group {
+    flex-direction: column;
+  }
+}
+
+
+/* ─────────────────────────────────────────
+   TABLE ADDITIONS — paste at bottom of
+   your existing Checker.css
+───────────────────────────────────────── */
+
+/* Horizontal scroll wrapper so table never breaks layout */
+.table-scroll {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Base table reset */
+.history-table table {
+  width: 100%;
+  min-width: 560px;          /* prevents squish on small screens */
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+/* Header row */
+.history-table thead tr {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.history-table thead th {
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #555;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+/* Body rows */
+.history-table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  transition: background 0.15s;
+}
+
+.history-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.history-table tbody tr:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+/* Date cell */
+.td-date {
+  padding: 10px 14px;
+  font-size: 11.5px;
+  color: #777;
+  white-space: nowrap;
+}
+
+/* Numeric value cell */
+.td-val {
+  padding: 10px 14px;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+}
+
+/* ── STATUS BADGES ── 
+   Uses the same color meaning as your existing
+   .normal / .warning / .high / .low classes      */
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge-normal {
+  background: rgba(39, 174, 96, 0.15);
+  color: #1e8449;
+}
+
+.badge-warning {
+  background: rgba(243, 156, 18, 0.15);
+  color: #b7770d;
+}
+
+.badge-high {
+  background: rgba(231, 76, 60, 0.15);
+  color: #c0392b;
+}
+
+.badge-low {
+  background: rgba(52, 152, 219, 0.15);
+  color: #1a6fa8;
+}
+
+.badge-neutral {
+  color: #bbb;
+  font-size: 13px;
+}
+
+/* ─────────────────────────────────────────
+   TOGGLE GROUP — paste at bottom of Bmi.css
+───────────────────────────────────────── */
+
+.toggle-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+  flex-wrap: nowrap;
+}
+
+/* allow wrapping for the 5-option activity row */
+.toggle-group--wrap {
+  flex-wrap: wrap;
+}
+
+.toggle-btn {
+  flex: 1;
+  padding: 9px 14px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(0, 0, 0, 0.15);
+  background: transparent;
+  color: #555;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.18s, background 0.18s, color 0.18s, box-shadow 0.18s;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.toggle-btn:hover:not(.toggle-active) {
+  border-color: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.04);
+  color: #333;
+}
+
+/* active state — matches your existing button primary color */
+.toggle-btn.toggle-active {
+  background: var(--primary, #4f86f7);
+  border-color: var(--primary, #4f86f7);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(79, 134, 247, 0.3);
+}

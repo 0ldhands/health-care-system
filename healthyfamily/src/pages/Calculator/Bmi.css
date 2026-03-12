@@ -1,0 +1,128 @@
+.calc-card {
+  background: white;
+  padding: 30px;
+  width: 600px;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(124, 58, 237, 0.25);
+  transition: 0.3s ease;
+}
+
+.calc-card:hover {
+  transform: translateY(-5px);
+}
+
+.bmi-title {
+  text-align: center;
+  color: #5b21b6;
+  margin-bottom: 15px;
+}
+
+.calc-card label {
+  font-weight: 600;
+  color: #4c1d95;
+}
+
+.calc-card input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #d8b4fe;
+  transition: 0.2s;
+}
+
+.calc-card input:focus {
+  outline: none;
+  border-color: #7c3aed;
+  box-shadow: 0 0 5px rgba(124, 58, 237, 0.4);
+}
+
+.btn-group {
+  display: flex;
+  gap: 10px;
+}
+
+.calc-card button {
+  flex: 1;
+  padding: 10px;
+  background: #7c3aed;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.calc-card button:hover {
+  background: #6d28d9;
+}
+
+.clear-btn {
+  background: #ede9fe !important;
+  color: #5b21b6 !important;
+}
+
+.clear-btn:hover {
+  background: #ddd6fe !important;
+}
+
+.result-box {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #4c1d95;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+/* Status Colors */
+.normal {
+  color: #16a34a;
+}
+
+.warning {
+  color: #f59e0b;
+}
+
+.high {
+  color: #dc2626;
+}
+
+.low {
+  color: #2563eb;
+}
+
+/* BMI Progress Bar */
+.bmi-bar {
+  margin-top: 10px;
+  height: 10px;
+  background: #ede9fe;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.bmi-progress {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.bmi-progress.normal {
+  background: #16a34a;
+}
+
+.bmi-progress.warning {
+  background: #f59e0b;
+}
+
+.bmi-progress.high {
+  background: #dc2626;
+}
+
+.bmi-progress.low {
+  background: #2563eb;
+}

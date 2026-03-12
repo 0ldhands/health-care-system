@@ -1,0 +1,151 @@
+/* =============================== Page Background =============================== */
+.symptoms-page {
+  padding: 50px 20px;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f3e8ff, #ede9fe, #ddd6fe);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =============================== Page Title =============================== */
+.symptoms-page h1,
+.symptoms-page h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #4c1d95;
+}
+
+/* =============================== Input Section =============================== */
+.symptoms-input-container {
+  width: 100%;
+  max-width: 550px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.15);
+  margin-bottom: 40px;
+  transition: 0.3s;
+}
+
+.symptoms-input-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Input Field */
+.symptoms-input-container input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid #ddd6fe;
+  background: white;
+  font-size: 14px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.symptoms-input-container input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+}
+
+/* Button */
+.symptoms-input-container button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #7c3aed, #9333ea);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.symptoms-input-container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(124, 58, 237, 0.4);
+}
+
+/* =============================== Results Section =============================== */
+.disease-list {
+  width: 100%;
+  max-width: 550px;
+}
+
+/* Disease Card */
+.disease-item {
+  background: white;
+  padding: 22px;
+  margin-bottom: 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.disease-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.2);
+}
+
+/* Purple Top Border */
+.disease-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(90deg, #7c3aed, #a855f7);
+}
+
+/* Disease Name */
+.disease-item h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  color: #4c1d95;
+}
+
+/* Description */
+.disease-item p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* =============================== No Result =============================== */
+.no-result {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255,255,255,0.6);
+  color: #6b7280;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* =============================== Loading / Error =============================== */
+.symptoms-page p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* =============================== Responsive =============================== */
+@media (max-width: 600px) {
+  .symptoms-page h1,
+  .symptoms-page h2 {
+    font-size: 22px;
+  }
+
+  .symptoms-input-container,
+  .disease-list {
+    max-width: 95%;
+  }
+}
